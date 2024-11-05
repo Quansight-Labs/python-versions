@@ -1,0 +1,35 @@
+<#
+.SYNOPSIS
+Generate versions manifest based on repository releases
+.DESCRIPTION
+Versions manifest is needed to find the latest assets for particular version of tool
+.PARAMETER RepositoryFullName
+Required parameter. The owner and repository name. For example, 'actions/versions-package-tools'
+.PARAMETER GitHubAccessToken
+Required parameter. PAT Token to overcome GitHub API Rate limit
+.PARAMETER OutputFile
+Required parameter. File "*.json" where generated results will be saved
+.PARAMETER ConfigurationFile
+Path to the json file with parsing configuration
+#>
+
+param (
+    [Parameter(Mandatory)] [string] $RepositoryFullName,
+    [Parameter(Mandatory)] [string] $GitHubAccessToken,
+    [Parameter(Mandatory)] [string] $OutputFile,
+    [Parameter(Mandatory)] [string] $ConfigurationFile
+)
+
+Import-Module (Join-Path $PSScriptRoot "../helpers/github/github-api.psm1")
+Import-Module (Join-Path $PSScriptRoot "manifest-utils.psm1") -Force
+
+$configuration = Read-ConfigurationFile -Filepath $ConfigurationFile
+
+$gitHubApi = Get-GitHubApi -RepositoryFullName $RepositoryFullName -AccessToken $GitHubAccessToken
+$noGILreleases = $gitHubApi.GetReleases()
+
+$upstreamApi = Get-GitHubApi -RepositoryFullName "actions/python-versions" -AccessToken $GitHubAccessToken
+$releases = $upstreamApi.GetReleases()
+
+$versionIndex = Build-VersionsManifest -Releases $releases -NoGILReleases $noGILreleases -Configuration $configuration
+$versionIndex | ConvertTo-Json -Depth 5 | Out-File $OutputFile -Encoding UTF8NoBOM -Force
