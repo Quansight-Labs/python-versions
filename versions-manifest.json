@@ -68,6 +68,51 @@
         "arch": "x86",
         "platform": "win32",
         "download_url": "https://github.com/actions/python-versions/releases/download/3.14.0-alpha.4-12780783146/python-3.14.0-alpha.4-win32-x86.zip"
+      },
+      {
+        "filename": "python-3.14.0-alpha.4-darwin-arm64-freethreaded.tar.gz",
+        "arch": "arm64-freethreaded",
+        "platform": "darwin",
+        "download_url": "https://github.com/Quansight-Labs/python-versions/releases/download/3.14.0-alpha.4-13057191570/python-3.14.0-alpha.4-darwin-arm64-freethreaded.tar.gz"
+      },
+      {
+        "filename": "python-3.14.0-alpha.4-darwin-x64-freethreaded.tar.gz",
+        "arch": "x64-freethreaded",
+        "platform": "darwin",
+        "download_url": "https://github.com/Quansight-Labs/python-versions/releases/download/3.14.0-alpha.4-13057191570/python-3.14.0-alpha.4-darwin-x64-freethreaded.tar.gz"
+      },
+      {
+        "filename": "python-3.14.0-alpha.4-linux-20.04-x64-freethreaded.tar.gz",
+        "arch": "x64-freethreaded",
+        "platform": "linux",
+        "platform_version": "20.04",
+        "download_url": "https://github.com/Quansight-Labs/python-versions/releases/download/3.14.0-alpha.4-13057191570/python-3.14.0-alpha.4-linux-20.04-x64-freethreaded.tar.gz"
+      },
+      {
+        "filename": "python-3.14.0-alpha.4-linux-22.04-x64-freethreaded.tar.gz",
+        "arch": "x64-freethreaded",
+        "platform": "linux",
+        "platform_version": "22.04",
+        "download_url": "https://github.com/Quansight-Labs/python-versions/releases/download/3.14.0-alpha.4-13057191570/python-3.14.0-alpha.4-linux-22.04-x64-freethreaded.tar.gz"
+      },
+      {
+        "filename": "python-3.14.0-alpha.4-linux-24.04-x64-freethreaded.tar.gz",
+        "arch": "x64-freethreaded",
+        "platform": "linux",
+        "platform_version": "24.04",
+        "download_url": "https://github.com/Quansight-Labs/python-versions/releases/download/3.14.0-alpha.4-13057191570/python-3.14.0-alpha.4-linux-24.04-x64-freethreaded.tar.gz"
+      },
+      {
+        "filename": "python-3.14.0-alpha.4-win32-x64-freethreaded.zip",
+        "arch": "x64-freethreaded",
+        "platform": "win32",
+        "download_url": "https://github.com/Quansight-Labs/python-versions/releases/download/3.14.0-alpha.4-13057191570/python-3.14.0-alpha.4-win32-x64-freethreaded.zip"
+      },
+      {
+        "filename": "python-3.14.0-alpha.4-win32-x86-freethreaded.zip",
+        "arch": "x86-freethreaded",
+        "platform": "win32",
+        "download_url": "https://github.com/Quansight-Labs/python-versions/releases/download/3.14.0-alpha.4-13057191570/python-3.14.0-alpha.4-win32-x86-freethreaded.zip"
       }
     ]
   },
